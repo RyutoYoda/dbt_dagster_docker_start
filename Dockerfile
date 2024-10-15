@@ -13,7 +13,7 @@ ENV TERM xterm
 
 RUN pip install --upgrade pip setuptools
 RUN pip install dbt-bigquery
-RUN pip install dbt-snowflake
+#RUN pip install dbt-snowflake
 RUN pip install dagster-dbt 
 RUN pip install dbt-osmosis
 
