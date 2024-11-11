@@ -1,3 +1,4 @@
+# docker-compose.yml
 version: '3'
 services:
   dbt-core:
@@ -6,3 +7,7 @@ services:
     container_name: 'dbt-dag'
     working_dir: '/root/'
     tty: true
+    volumes:
+      - .:/root/  # プロジェクトディレクトリをマウント
+      - ~/.dbt/profiles.yml:/root/.dbt/profiles.yml  # ローカルの profiles.yml をマウント
+# (開始時のコマンド)docker exec -it dbt-dag dbt init dbt_project
