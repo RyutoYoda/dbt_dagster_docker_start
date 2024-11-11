@@ -1,3 +1,4 @@
+#Dockerfile
 FROM python:3.12.0
 
 USER root
@@ -12,8 +13,11 @@ ENV LC_ALL ja_JP.UTF-8
 ENV TERM xterm
 
 RUN pip install --upgrade pip setuptools
+RUN pip install dbt-snowflake
+RUN pip install dbt-databricks
 RUN pip install dbt-bigquery
-#RUN pip install dbt-snowflake
 RUN pip install dagster-dbt 
 RUN pip install dbt-osmosis
+
+
 
