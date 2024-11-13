@@ -18,6 +18,7 @@ RUN pip install dbt-databricks
 RUN pip install dbt-bigquery
 RUN pip install dagster-dbt 
 RUN pip install dbt-osmosis
+RUN pip install dbt-duckdb
 
 
 
